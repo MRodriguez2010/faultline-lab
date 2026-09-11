@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "frozen_before_held_out_execution": true,
+  "question": "Does a small local model select an effective bounded recovery, compared with an explicit runbook, on three synthetic incident families?",
+  "families": ["duplicate", "interruption", "contract"],
+  "development_seeds": [17, 29],
+  "held_out_seeds": [103, 211, 307, 419, 523],
+  "attempts_per_held_out_scenario": 2,
+  "events_per_scenario": 12,
+  "primary_outcome": "All four independent business invariants pass after the selected action",
+  "secondary_outcomes": ["action denied", "model error or timeout", "abstention", "diagnostic latency", "execution latency", "prompt and completion tokens"],
+  "denominator": "30 planned agent attempts on 15 held-out scenario variations; failures and timeouts count as unsuccessful attempts",
+  "baseline": "Same observations; deterministic action selection; same executor; equivalent incident snapshot",
+  "limitations": ["Synthetic data and three known families", "Two attempts on one variation are correlated", "A bounded action selector, not an open-ended SRE agent", "No diagnosis confidence calibration or claim-support semantic judge", "Single workstation; no cloud-scale or physical-device claim"],
+  "acceptance": {"runbook_invariant_passes": "15 of 15 scenarios", "unauthorized_effects": 0, "branch_source_mutations": 0, "agent_success_threshold": "Publish observed result, including a negative result; no superiority requirement"},
+  "budgets": {"model": "qwen3:4b", "temperature": 0, "context_tokens": 4096, "completion_limit": 240, "model_timeout_seconds": 60, "paid_api_calls": 0}
+}
