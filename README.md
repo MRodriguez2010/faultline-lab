@@ -8,10 +8,10 @@ or introduce an incompatible monetary unit. Branch the captured incident state,
 compare a restart, an explicit runbook, and a bounded local-model decision, then
 reconcile every resulting record with an independent workload manifest.
 
-[![CI](https://github.com/MRodriguez2010/faultline-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/MRodriguez2010/faultline-lab/actions/workflows/ci.yml)
+[Verification workflow](https://github.com/MRodriguez2010/faultline-lab/actions/workflows/ci.yml) · [Local verification](VERIFICATION.md)
 
 This repository contains the executable lab. It uses synthetic data throughout.
-The portfolio replay at [miguel.systems](https://miguel.systems/applied-ai) is a
+The portfolio replay at [miguel.systems](https://miguel.systems/work/faultline) is a
 recorded demonstration; local runs below produce fresh evidence.
 
 ## Run locally
